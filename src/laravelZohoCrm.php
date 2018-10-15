@@ -33,12 +33,19 @@ class laravelZohoCrm extends Eloquent
       }
     }
 
+    /**
+    * Get config params for this package
+    *
+    */
     private function getConfigParams(){
 
       return config('laravelzohocrm');
     }
 
-
+    /**
+    * Set http request for development
+    *
+    */
     public function getLeadsHTTP(){
 
       $client = new Client(['base_uri' => 'https://www.zohoapis.com/crm/v2/']);
@@ -51,7 +58,10 @@ class laravelZohoCrm extends Eloquent
       return $res->getBody();
     }
 
-
+    /**
+    * Get the Organization data
+    *
+    */
     public function getOrg(){
 
       $zcrmModuleIns = ZCRMRestClient::getInstance();
@@ -59,6 +69,10 @@ class laravelZohoCrm extends Eloquent
       $this->response = $records->getResponseJSON();
     }
 
+    /**
+    * Get all data of module records 'Leads,Contacts,Invoices'
+    *
+    */
     public function getModuleRecords($module){
 
       $zcrmModuleIns = ZCRMModule::getInstance($module);
@@ -66,6 +80,10 @@ class laravelZohoCrm extends Eloquent
       $this->response = $records;
     }
 
+    /**
+    * Insert new record or news records for instance 'Leads,Contacts,Invoices'
+    *
+    */
     public function addModuleRecord($module,$recordsArray){
 
       $entityResponses = [];
@@ -84,13 +102,17 @@ class laravelZohoCrm extends Eloquent
         $record[$record_number]->setModifiedTime($date);
 
       }
-      $bulkAPIResponse = $zcrmModuleIns->createRecords($record); // $recordsArray - array of ZCRMRecord instances filled with required data for creation.
+      $bulkAPIResponse = $zcrmModuleIns->createRecords($record);
       $entityResponses = $bulkAPIResponse->getEntityResponses();
 
       $this->response = $entityResponses[0]->getResponseJSON();
 
     }
 
+    /**
+    * Get specific record of the module
+    *
+    */
     public function getModuleRecord($module, $entity_id){
 
       $moduleInstance = ZCRMModule::getInstance($module);
@@ -98,7 +120,40 @@ class laravelZohoCrm extends Eloquent
       $this->response = $records->getResponseJSON();
     }
 
+    /**
+    * Update specific record of the module
+    *
+    */
+    public function updateModuleRecord($module, $entity_id, $recordsArray){
 
+      $entityResponses = [];
+      $date = str_replace(' ','T',date('Y-m-d H:m:s').'-5:00');
+      $zcrmModuleIns = ZCRMModule::getInstance($module);
 
+      foreach ($recordsArray as $record_number => $item) {
+        $record[$record_number] = ZCRMRecord::getInstance($module,$entity_id);
 
+        foreach ($item as $key => $value) {
+          $record[$record_number]->setFieldValue($key,$value);
+        }
+
+        $record[$record_number]->setModifiedBy(3572287000000181021);
+        $record[$record_number]->setModifiedTime($date);
+
+      }
+      $bulkAPIResponse = $zcrmModuleIns->updateRecords($record);
+      $entityResponses = $bulkAPIResponse->getEntityResponses();
+
+      $this->response = $entityResponses[0]->getResponseJSON();
+    }
+
+    /**
+    * Deelete specific record of the module
+    *
+    */
+    public function deleteModuleRecord($module, $entity_id){
+      $zcrmModuleIns = ZCRMModule::getInstance($module);
+      $records = $zcrmModuleIns->deleteRecords($entity_id);
+      $this->response = $records->getResponseJSON();
+    }
 }
