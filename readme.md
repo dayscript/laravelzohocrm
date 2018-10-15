@@ -37,7 +37,7 @@ If you discover any security related issues, please email author email instead o
 
 ## Credits
 
-- [author name][link-author]
+- [dayscript][http://www.dayscrippt.com]
 - [All Contributors][link-contributors]
 
 ## License
