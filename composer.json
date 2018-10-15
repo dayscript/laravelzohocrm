@@ -1,0 +1,45 @@
+{
+    "name": "dayscript/laravelzohocrm",
+    "description": ":description",
+    "license": "license",
+    "authors": [
+        {
+            "name": "dayscript",
+            "email": "soporte@dayscript.com",
+            "homepage": "http://dayscript.com"
+        }
+    ],
+    "homepage": "https://github.com/dayscript/laravelzohocrm",
+    "keywords": ["Laravel", "laravelZohoCrm"],
+    "require": {
+        "illuminate/support": "~5",
+        "zohocrm/php-sdk": "^1.1",
+        "cristianpontes/zoho-crm-client-php": "^1.7"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3.0",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "dayscript\\laravelZohoCrm\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "dayscript\\laravelZohoCrm\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "dayscript\\laravelZohoCrm\\laravelZohoCrmServiceProvider"
+            ],
+            "aliases": {
+                "laravelZohoCrm": "dayscript\\laravelZohoCrm\\Facades\\laravelZohoCrm"
+            }
+        }
+    }
+}
