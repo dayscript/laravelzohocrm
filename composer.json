@@ -1,5 +1,5 @@
 {
-    "name": "dayscript/laravelzohocrm",
+    "name": "dayscript/laravelZohoCrm",
     "description": ":description",
     "license": "license",
     "authors": [
@@ -9,7 +9,7 @@
             "homepage": "http://dayscript.com"
         }
     ],
-    "homepage": "https://github.com/dayscript/laravelzohocrm",
+    "homepage": "https://github.com/dayscript/laravelZohoCrm",
     "keywords": ["Laravel", "laravelZohoCrm"],
     "require": {
         "illuminate/support": "~5",
