@@ -1,7 +1,7 @@
 {
-    "name": "dayscript/laravelZohoCrm",
+    "name": "dayscript/laravelzohocrm",
     "description": ":description",
-    "license": "license",
+    "license": "AGPL-3.0-only",
     "authors": [
         {
             "name": "dayscript",
@@ -9,7 +9,7 @@
             "homepage": "http://dayscript.com"
         }
     ],
-    "homepage": "https://github.com/dayscript/laravelZohoCrm",
+    "homepage": "https://github.com/dayscript/laravelzohocrm",
     "keywords": ["Laravel", "laravelZohoCrm"],
     "require": {
         "illuminate/support": "~5",
