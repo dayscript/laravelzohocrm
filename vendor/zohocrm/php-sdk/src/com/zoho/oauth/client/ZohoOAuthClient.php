@@ -60,7 +60,7 @@ class ZohoOAuthClient
 	}
 
 	public function generateAccessToken($grantToken)
-	{
+	{	
 		if($grantToken == null)
 		{
 			throw new ZohoOAuthException("Grant Token is not provided.");

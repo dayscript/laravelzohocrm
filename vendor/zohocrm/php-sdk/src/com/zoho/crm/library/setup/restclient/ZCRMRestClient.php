@@ -17,7 +17,7 @@ class ZCRMRestClient
 	}
 
 	public static function initialize($configuration=null)
-	{
+	{	
 	    ZCRMConfigUtil::initialize(true,$configuration);
 	}
 
