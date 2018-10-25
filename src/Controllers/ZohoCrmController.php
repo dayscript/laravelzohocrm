@@ -3,8 +3,6 @@
 
 namespace dayscript\laravelZohoCrm\Controllers;
 
-// require '/home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/vendor/autoload.php';
-
 use App\Http\Controllers\Controller;
 use dayscript\laravelZohoCrm\laravelZohoCrm;
 
@@ -36,7 +34,7 @@ class ZohoCrmController extends Controller {
       $zoho = new LaravelZohoCrm;
       $recordsArray = array([
         "Company" => "Afar INC",
-        "Email" => "myafarinc@gmail.com",
+        "Email" => "ariel.acevedo@afar.systems",
         "Description" => null,
         "Rating" => null,
         "Website" => null,
