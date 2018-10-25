@@ -3897,3 +3897,4 @@ Stack trace:
 #31 /home/ariel/projects/incentives/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #32 /home/ariel/projects/incentives/server.php(21): require_once('/home/ariel/pro...')
 #33 {main}
+2018-10-25 08:44:32 INFO: Access Token has expired. Hence refreshing.
