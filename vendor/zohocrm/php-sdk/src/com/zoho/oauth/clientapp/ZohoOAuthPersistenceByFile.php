@@ -38,6 +38,7 @@ class ZohoOAuthPersistenceByFile implements ZohoOAuthPersistenceInterface
 	{
 		try{
 			self::setIncludePath();
+			
 			$serialized=file_get_contents("zcrm_oauthtokens.txt",FILE_USE_INCLUDE_PATH);
 			
 			if(!isset($serialized) || $serialized=="")

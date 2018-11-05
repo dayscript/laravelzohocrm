@@ -10,7 +10,7 @@ return [
   'db_port'       =>  env('DB_PORT',3306),
   'db_username'   =>  env('DB_USERNAME',''),
   'db_password'   =>  env('DB_PASSWORD',''),
-  'token_persistence_path' => env('ZOHOCRM_TOKEN_PERSISTENCE_PATH','/home/ariel/projects/incentives/storage/app/zoho'),
+  'token_persistence_path' => env('ZOHOCRM_TOKEN_PERSISTENCE_PATH','/home/forge/incentives.demodayscript.com/storage/app/zoho'),
   'persistence_handler_class' =>  env('ZOHOCRM_PERSISTENCE_HANDLER_CLASS','ZohoOAuthPersistenceHandler'),
   'client_email' => env('ZOHOCRM_CLIENT_EMAIL','ariel.acevedo@afar.systems'),
 ];
