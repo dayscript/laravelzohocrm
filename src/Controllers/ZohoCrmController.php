@@ -71,7 +71,6 @@ class ZohoCrmController extends Controller {
 
     public function getModuleRecord($module, $entity_id){
       $zoho = new laravelZohoCrm();
-
       $zoho->getModuleRecord($module, $entity_id);
       return $zoho;
     }

@@ -3,7 +3,8 @@
 namespace dayscript\laravelZohoCrm;
 
 
-require '/home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/autoload.php';
+require __DIR__.'/../vendor/autoload.php';
+
 
 use \Illuminate\Database\Eloquent\Model as Eloquent;
 use GuzzleHttp\Client;
@@ -29,7 +30,6 @@ class laravelZohoCrm extends Eloquent
       try {
         $oAuthTokens = $oAuthClient->generateAccessToken($this->configParams['grant_token']);
       } catch (\Exception $e) {
-
         $this->refreshToken = $oAuthClient->getAccessToken($_SERVER['user_email_id']);
       }
     }
