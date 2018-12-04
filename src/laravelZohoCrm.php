@@ -3,7 +3,7 @@
 namespace dayscript\laravelZohoCrm;
 
 
-require '/home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/autoload.php';
+require '/home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/vendor/autoload.php';
 
 use \Illuminate\Database\Eloquent\Model as Eloquent;
 use GuzzleHttp\Client;
