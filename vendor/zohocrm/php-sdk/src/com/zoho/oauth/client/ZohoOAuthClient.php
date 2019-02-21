@@ -1,5 +1,4 @@
 <?php
-
 require_once 'ZohoOAuth.php';
 require_once realpath(dirname(__FILE__)."/../common/OAuthLogger.php");
 require_once realpath(dirname(__FILE__)."/../common/ZohoOAuthHTTPConnector.php");
@@ -60,7 +59,7 @@ class ZohoOAuthClient
 	}
 
 	public function generateAccessToken($grantToken)
-	{	
+	{
 		if($grantToken == null)
 		{
 			throw new ZohoOAuthException("Grant Token is not provided.");

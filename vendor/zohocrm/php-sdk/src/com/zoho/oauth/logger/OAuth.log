@@ -3898,6 +3898,7 @@ Stack trace:
 #32 /home/ariel/projects/incentives/server.php(21): require_once('/home/ariel/pro...')
 #33 {main}
 2018-10-25 08:44:32 INFO: Access Token has expired. Hence refreshing.
+<<<<<<< HEAD
 2018-10-29 15:22:38 SEVERE: Exception occured while fetching OAuthTokens from file(file::ZohoOAuthPersistenceByFile)(file_get_contents(zcrm_oauthtokens.txt): failed to open stream: No such file or directory)
 ErrorException: file_get_contents(zcrm_oauthtokens.txt): failed to open stream: No such file or directory in /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/clientapp/ZohoOAuthPersistenceByFile.php:41
 Stack trace:
@@ -4076,6 +4077,12 @@ Stack trace:
 2018-10-29 15:23:24 SEVERE: Exception while retrieving tokens from persistence - ZohoOAuthException Caused by:'No Tokens exist for the given user-identifier,Please generate and try again.' in /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/clientapp/ZohoOAuthPersistenceByFile.php(45)
 #0 /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/client/ZohoOAuthClient.php(38): ZohoOAuthPersistenceByFile->getOAuthTokens('ariel.acevedo@a...')
 #1 /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/src/laravelZohoCrm.php(33): ZohoOAuthClient->getAccessToken('ariel.acevedo@a...')
+=======
+2018-11-04 22:21:42 INFO: Access Token has expired. Hence refreshing.
+2018-11-04 22:24:12 SEVERE: Exception while retrieving tokens from persistence - ZohoOAuthException Caused by:'No Tokens exist for the given user-identifier,Please generate and try again.' in /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/clientapp/ZohoOAuthPersistenceByFile.php(61)
+#0 /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/client/ZohoOAuthClient.php(38): ZohoOAuthPersistenceByFile->getOAuthTokens('soporte@linkdig...')
+#1 /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/src/laravelZohoCrm.php(34): ZohoOAuthClient->getAccessToken('soporte@linkdig...')
+>>>>>>> 842be7850748fd8c0ecdb55117f95983884b87ad
 #2 /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/src/Controllers/ZohoCrmController.php(126): dayscript\laravelZohoCrm\laravelZohoCrm->__construct()
 #3 [internal function]: dayscript\laravelZohoCrm\Controllers\ZohoCrmController->login()
 #4 /home/ariel/projects/incentives/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(55): call_user_func_array(Array, Array)
@@ -4108,6 +4115,7 @@ Stack trace:
 #31 /home/ariel/projects/incentives/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #32 /home/ariel/projects/incentives/server.php(21): require_once('/home/ariel/pro...')
 #33 {main}
+<<<<<<< HEAD
 2018-10-29 15:24:35 SEVERE: Exception occured while fetching OAuthTokens from file(file::ZohoOAuthPersistenceByFile)(unserialize(): Error at offset 70 of 380 bytes)
 ErrorException: unserialize(): Error at offset 70 of 380 bytes in /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/clientapp/ZohoOAuthPersistenceByFile.php:47
 Stack trace:
@@ -4269,6 +4277,15 @@ Stack trace:
 #1 /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/clientapp/ZohoOAuthPersistenceByFile.php(47): unserialize('a:1:{i:0;O:15:"...')
 #2 /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/client/ZohoOAuthClient.php(38): ZohoOAuthPersistenceByFile->getOAuthTokens('ariel.acevedo@a...')
 #3 /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/src/laravelZohoCrm.php(33): ZohoOAuthClient->getAccessToken('ariel.acevedo@a...')
+=======
+2018-11-04 22:24:51 SEVERE: Exception occured while fetching OAuthTokens from file(file::ZohoOAuthPersistenceByFile)(unserialize(): Error at offset 383 of 384 bytes)
+ErrorException: unserialize(): Error at offset 383 of 384 bytes in /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/clientapp/ZohoOAuthPersistenceByFile.php:47
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'unserialize(): ...', '/home/ariel/pro...', 47, Array)
+#1 /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/clientapp/ZohoOAuthPersistenceByFile.php(47): unserialize('a:1:{i:0;O:15:"...')
+#2 /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/client/ZohoOAuthClient.php(38): ZohoOAuthPersistenceByFile->getOAuthTokens('soporte@linkdig...')
+#3 /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/src/laravelZohoCrm.php(34): ZohoOAuthClient->getAccessToken('soporte@linkdig...')
+>>>>>>> 842be7850748fd8c0ecdb55117f95983884b87ad
 #4 /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/src/Controllers/ZohoCrmController.php(126): dayscript\laravelZohoCrm\laravelZohoCrm->__construct()
 #5 [internal function]: dayscript\laravelZohoCrm\Controllers\ZohoCrmController->login()
 #6 /home/ariel/projects/incentives/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(55): call_user_func_array(Array, Array)
@@ -4301,12 +4318,21 @@ Stack trace:
 #33 /home/ariel/projects/incentives/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #34 /home/ariel/projects/incentives/server.php(21): require_once('/home/ariel/pro...')
 #35 {main}
+<<<<<<< HEAD
 2018-10-29 15:29:44 SEVERE: Exception while retrieving tokens from persistence - ErrorException: unserialize(): Error at offset 70 of 380 bytes in /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/clientapp/ZohoOAuthPersistenceByFile.php:47
 Stack trace:
 #0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'unserialize(): ...', '/home/ariel/pro...', 47, Array)
 #1 /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/clientapp/ZohoOAuthPersistenceByFile.php(47): unserialize('a:1:{i:0;O:15:"...')
 #2 /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/client/ZohoOAuthClient.php(38): ZohoOAuthPersistenceByFile->getOAuthTokens('ariel.acevedo@a...')
 #3 /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/src/laravelZohoCrm.php(33): ZohoOAuthClient->getAccessToken('ariel.acevedo@a...')
+=======
+2018-11-04 22:24:51 SEVERE: Exception while retrieving tokens from persistence - ErrorException: unserialize(): Error at offset 383 of 384 bytes in /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/clientapp/ZohoOAuthPersistenceByFile.php:47
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'unserialize(): ...', '/home/ariel/pro...', 47, Array)
+#1 /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/clientapp/ZohoOAuthPersistenceByFile.php(47): unserialize('a:1:{i:0;O:15:"...')
+#2 /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/client/ZohoOAuthClient.php(38): ZohoOAuthPersistenceByFile->getOAuthTokens('soporte@linkdig...')
+#3 /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/src/laravelZohoCrm.php(34): ZohoOAuthClient->getAccessToken('soporte@linkdig...')
+>>>>>>> 842be7850748fd8c0ecdb55117f95983884b87ad
 #4 /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/src/Controllers/ZohoCrmController.php(126): dayscript\laravelZohoCrm\laravelZohoCrm->__construct()
 #5 [internal function]: dayscript\laravelZohoCrm\Controllers\ZohoCrmController->login()
 #6 /home/ariel/projects/incentives/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(55): call_user_func_array(Array, Array)
@@ -4339,11 +4365,17 @@ Stack trace:
 #33 /home/ariel/projects/incentives/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #34 /home/ariel/projects/incentives/server.php(21): require_once('/home/ariel/pro...')
 #35 {main}
+<<<<<<< HEAD
 2018-10-29 15:42:43 INFO: Access Token has expired. Hence refreshing.
 2018-11-20 17:10:44 INFO: Access Token has expired. Hence refreshing.
 2018-11-20 17:15:04 SEVERE: Exception while retrieving tokens from persistence - ZohoOAuthException Caused by:'No Tokens exist for the given user-identifier,Please generate and try again.' in /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/clientapp/ZohoOAuthPersistenceByFile.php(61)
 #0 /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/client/ZohoOAuthClient.php(38): ZohoOAuthPersistenceByFile->getOAuthTokens('soporte@linkdig...')
 #1 /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/src/laravelZohoCrm.php(33): ZohoOAuthClient->getAccessToken('soporte@linkdig...')
+=======
+2018-11-04 22:25:20 SEVERE: Exception while retrieving tokens from persistence - ZohoOAuthException Caused by:'No Tokens exist for the given user-identifier,Please generate and try again.' in /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/clientapp/ZohoOAuthPersistenceByFile.php(45)
+#0 /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/client/ZohoOAuthClient.php(38): ZohoOAuthPersistenceByFile->getOAuthTokens('soporte@linkdig...')
+#1 /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/src/laravelZohoCrm.php(34): ZohoOAuthClient->getAccessToken('soporte@linkdig...')
+>>>>>>> 842be7850748fd8c0ecdb55117f95983884b87ad
 #2 /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/src/Controllers/ZohoCrmController.php(126): dayscript\laravelZohoCrm\laravelZohoCrm->__construct()
 #3 [internal function]: dayscript\laravelZohoCrm\Controllers\ZohoCrmController->login()
 #4 /home/ariel/projects/incentives/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(55): call_user_func_array(Array, Array)
@@ -4376,7 +4408,11 @@ Stack trace:
 #31 /home/ariel/projects/incentives/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #32 /home/ariel/projects/incentives/server.php(21): require_once('/home/ariel/pro...')
 #33 {main}
+<<<<<<< HEAD
 2018-11-20 17:17:14 SEVERE: Exception while retrieving tokens from persistence - ZohoOAuthException Caused by:'No Tokens exist for the given user-identifier,Please generate and try again.' in /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/clientapp/ZohoOAuthPersistenceByFile.php(61)
+=======
+2018-11-04 22:27:22 SEVERE: Exception while retrieving tokens from persistence - ZohoOAuthException Caused by:'No Tokens exist for the given user-identifier,Please generate and try again.' in /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/clientapp/ZohoOAuthPersistenceByFile.php(45)
+>>>>>>> 842be7850748fd8c0ecdb55117f95983884b87ad
 #0 /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/client/ZohoOAuthClient.php(38): ZohoOAuthPersistenceByFile->getOAuthTokens('soporte@linkdig...')
 #1 /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/src/laravelZohoCrm.php(33): ZohoOAuthClient->getAccessToken('soporte@linkdig...')
 #2 /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/src/Controllers/ZohoCrmController.php(126): dayscript\laravelZohoCrm\laravelZohoCrm->__construct()
@@ -4411,7 +4447,11 @@ Stack trace:
 #31 /home/ariel/projects/incentives/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #32 /home/ariel/projects/incentives/server.php(21): require_once('/home/ariel/pro...')
 #33 {main}
+<<<<<<< HEAD
 2018-11-20 17:21:13 SEVERE: Exception while retrieving tokens from persistence - ZohoOAuthException Caused by:'No Tokens exist for the given user-identifier,Please generate and try again.' in /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/clientapp/ZohoOAuthPersistenceByFile.php(61)
+=======
+2018-11-04 22:29:35 SEVERE: Exception while retrieving tokens from persistence - ZohoOAuthException Caused by:'No Tokens exist for the given user-identifier,Please generate and try again.' in /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/clientapp/ZohoOAuthPersistenceByFile.php(45)
+>>>>>>> 842be7850748fd8c0ecdb55117f95983884b87ad
 #0 /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/client/ZohoOAuthClient.php(38): ZohoOAuthPersistenceByFile->getOAuthTokens('soporte@linkdig...')
 #1 /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/src/laravelZohoCrm.php(33): ZohoOAuthClient->getAccessToken('soporte@linkdig...')
 #2 /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/src/Controllers/ZohoCrmController.php(126): dayscript\laravelZohoCrm\laravelZohoCrm->__construct()
@@ -4446,6 +4486,7 @@ Stack trace:
 #31 /home/ariel/projects/incentives/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #32 /home/ariel/projects/incentives/server.php(21): require_once('/home/ariel/pro...')
 #33 {main}
+<<<<<<< HEAD
 2018-11-20 17:21:53 SEVERE: Exception while retrieving tokens from persistence - ZohoOAuthException Caused by:'No Tokens exist for the given user-identifier,Please generate and try again.' in /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/clientapp/ZohoOAuthPersistenceByFile.php(61)
 #0 /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/client/ZohoOAuthClient.php(38): ZohoOAuthPersistenceByFile->getOAuthTokens('soporte@linkdig...')
 #1 /home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/src/laravelZohoCrm.php(33): ZohoOAuthClient->getAccessToken('soporte@linkdig...')
@@ -4939,3 +4980,942 @@ Stack trace:
 #33 {main}
 2018-11-21 10:55:47 INFO: Access Token has expired. Hence refreshing.
 2018-12-04 08:59:40 INFO: Access Token has expired. Hence refreshing.
+=======
+
+2018-11-04 22:59:38 INFO: Access Token has expired. Hence refreshing.
+2018-11-04 23:01:06 SEVERE: Exception while retrieving tokens from persistence - ZohoOAuthException Caused by:'No Tokens exist for the given user-identifier,Please generate and try again.' in /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/clientapp/ZohoOAuthPersistenceByFile.php(62)
+#0 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/client/ZohoOAuthClient.php(38): ZohoOAuthPersistenceByFile->getOAuthTokens('soporte@linkdig...')
+#1 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/src/laravelZohoCrm.php(33): ZohoOAuthClient->getAccessToken('soporte@linkdig...')
+#2 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/src/Controllers/ZohoCrmController.php(125): dayscript\laravelZohoCrm\laravelZohoCrm->__construct()
+#3 [internal function]: dayscript\laravelZohoCrm\Controllers\ZohoCrmController->login()
+#4 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(55): call_user_func_array(Array, Array)
+#5 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('login', Array)
+#6 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(dayscript\laravelZohoCrm\Controllers\ZohoCrmController), 'login')
+#7 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(160): Illuminate\Routing\Route->runController()
+#8 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(572): Illuminate\Routing\Route->run()
+#9 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#10 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#11 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#12 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#13 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#14 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#15 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#16 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#17 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#18 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#19 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#20 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#21 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#22 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#23 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#24 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#25 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#26 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#27 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#29 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#30 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#31 /home/forge/incentives.demodayscript.com/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#32 {main}
+2018-11-04 23:01:24 SEVERE: Exception while retrieving tokens from persistence - ZohoOAuthException Caused by:'No Tokens exist for the given user-identifier,Please generate and try again.' in /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/clientapp/ZohoOAuthPersistenceByFile.php(62)
+#0 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/client/ZohoOAuthClient.php(38): ZohoOAuthPersistenceByFile->getOAuthTokens('soporte@linkdig...')
+#1 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/src/laravelZohoCrm.php(33): ZohoOAuthClient->getAccessToken('soporte@linkdig...')
+#2 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/src/Controllers/ZohoCrmController.php(125): dayscript\laravelZohoCrm\laravelZohoCrm->__construct()
+#3 [internal function]: dayscript\laravelZohoCrm\Controllers\ZohoCrmController->login()
+#4 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(55): call_user_func_array(Array, Array)
+#5 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('login', Array)
+#6 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(dayscript\laravelZohoCrm\Controllers\ZohoCrmController), 'login')
+#7 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(160): Illuminate\Routing\Route->runController()
+#8 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(572): Illuminate\Routing\Route->run()
+#9 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#10 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#11 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#12 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#13 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#14 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#15 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#16 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#17 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#18 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#19 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#20 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#21 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#22 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#23 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#24 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#25 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#26 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#27 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#29 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#30 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#31 /home/forge/incentives.demodayscript.com/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#32 {main}
+2018-11-04 23:01:46 SEVERE: Exception while retrieving tokens from persistence - ZohoOAuthException Caused by:'No Tokens exist for the given user-identifier,Please generate and try again.' in /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/clientapp/ZohoOAuthPersistenceByFile.php(62)
+#0 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/client/ZohoOAuthClient.php(38): ZohoOAuthPersistenceByFile->getOAuthTokens('soporte@linkdig...')
+#1 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/src/laravelZohoCrm.php(33): ZohoOAuthClient->getAccessToken('soporte@linkdig...')
+#2 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/src/Controllers/ZohoCrmController.php(125): dayscript\laravelZohoCrm\laravelZohoCrm->__construct()
+#3 [internal function]: dayscript\laravelZohoCrm\Controllers\ZohoCrmController->login()
+#4 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(55): call_user_func_array(Array, Array)
+#5 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('login', Array)
+#6 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(dayscript\laravelZohoCrm\Controllers\ZohoCrmController), 'login')
+#7 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(160): Illuminate\Routing\Route->runController()
+#8 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(572): Illuminate\Routing\Route->run()
+#9 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#10 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#11 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#12 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#13 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#14 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#15 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#16 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#17 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#18 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#19 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#20 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#21 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#22 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#23 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#24 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#25 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#26 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#27 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#29 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#30 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#31 /home/forge/incentives.demodayscript.com/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#32 {main}
+2018-11-05 13:17:46 SEVERE: Exception while retrieving tokens from persistence - ZohoOAuthException Caused by:'No Tokens exist for the given user-identifier,Please generate and try again.' in /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/clientapp/ZohoOAuthPersistenceByFile.php(62)
+#0 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/client/ZohoOAuthClient.php(38): ZohoOAuthPersistenceByFile->getOAuthTokens('soporte@linkdig...')
+#1 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/src/laravelZohoCrm.php(33): ZohoOAuthClient->getAccessToken('soporte@linkdig...')
+#2 /home/forge/incentives.demodayscript.com/app/Incentives/Core/Entity.php(219): dayscript\laravelZohoCrm\laravelZohoCrm->__construct()
+#3 /home/forge/incentives.demodayscript.com/app/Http/Controllers/EntitiesController.php(67): App\Incentives\Core\Entity->createZoho('Contacts', Array)
+#4 [internal function]: App\Http\Controllers\EntitiesController->store(Object(Illuminate\Http\Request))
+#5 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(55): call_user_func_array(Array, Array)
+#6 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('store', Array)
+#7 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\EntitiesController), 'store')
+#8 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(160): Illuminate\Routing\Route->runController()
+#9 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(572): Illuminate\Routing\Route->run()
+#10 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#11 /home/forge/incentives.demodayscript.com/app/Http/Middleware/Cors.php(18): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#12 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#13 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#14 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#15 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#16 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#17 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#18 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#19 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#20 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#21 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#22 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#23 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#24 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#25 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#27 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#28 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#29 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#30 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#31 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#32 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#33 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#34 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#35 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#36 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#37 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#38 /home/forge/incentives.demodayscript.com/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#39 {main}
+2018-11-05 13:20:35 SEVERE: Exception while retrieving tokens from persistence - ZohoOAuthException Caused by:'No Tokens exist for the given user-identifier,Please generate and try again.' in /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/clientapp/ZohoOAuthPersistenceByFile.php(62)
+#0 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/client/ZohoOAuthClient.php(38): ZohoOAuthPersistenceByFile->getOAuthTokens('soporte@linkdig...')
+#1 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/src/laravelZohoCrm.php(33): ZohoOAuthClient->getAccessToken('soporte@linkdig...')
+#2 /home/forge/incentives.demodayscript.com/app/Incentives/Core/Entity.php(219): dayscript\laravelZohoCrm\laravelZohoCrm->__construct()
+#3 /home/forge/incentives.demodayscript.com/app/Http/Controllers/EntitiesController.php(67): App\Incentives\Core\Entity->createZoho('Contacts', Array)
+#4 [internal function]: App\Http\Controllers\EntitiesController->store(Object(Illuminate\Http\Request))
+#5 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(55): call_user_func_array(Array, Array)
+#6 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('store', Array)
+#7 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\EntitiesController), 'store')
+#8 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(160): Illuminate\Routing\Route->runController()
+#9 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(572): Illuminate\Routing\Route->run()
+#10 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#11 /home/forge/incentives.demodayscript.com/app/Http/Middleware/Cors.php(18): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#12 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#13 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#14 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#15 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#16 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#17 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#18 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#19 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#20 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#21 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#22 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#23 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#24 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#25 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#27 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#28 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#29 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#30 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#31 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#32 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#33 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#34 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#35 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#36 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#37 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#38 /home/forge/incentives.demodayscript.com/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#39 {main}
+2018-11-05 13:21:11 SEVERE: Exception while retrieving tokens from persistence - ZohoOAuthException Caused by:'No Tokens exist for the given user-identifier,Please generate and try again.' in /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/clientapp/ZohoOAuthPersistenceByFile.php(62)
+#0 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/client/ZohoOAuthClient.php(38): ZohoOAuthPersistenceByFile->getOAuthTokens('soporte@linkdig...')
+#1 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/src/laravelZohoCrm.php(33): ZohoOAuthClient->getAccessToken('soporte@linkdig...')
+#2 /home/forge/incentives.demodayscript.com/app/Incentives/Core/Entity.php(219): dayscript\laravelZohoCrm\laravelZohoCrm->__construct()
+#3 /home/forge/incentives.demodayscript.com/app/Http/Controllers/EntitiesController.php(67): App\Incentives\Core\Entity->createZoho('Contacts', Array)
+#4 [internal function]: App\Http\Controllers\EntitiesController->store(Object(Illuminate\Http\Request))
+#5 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(55): call_user_func_array(Array, Array)
+#6 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('store', Array)
+#7 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\EntitiesController), 'store')
+#8 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(160): Illuminate\Routing\Route->runController()
+#9 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(572): Illuminate\Routing\Route->run()
+#10 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#11 /home/forge/incentives.demodayscript.com/app/Http/Middleware/Cors.php(18): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#12 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#13 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#14 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#15 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#16 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#17 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#18 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#19 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#20 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#21 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#22 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#23 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#24 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#25 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#27 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#28 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#29 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#30 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#31 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#32 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#33 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#34 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#35 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#36 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#37 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#38 /home/forge/incentives.demodayscript.com/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#39 {main}
+2018-11-05 13:37:01 SEVERE: Exception while retrieving tokens from persistence - ZohoOAuthException Caused by:'No Tokens exist for the given user-identifier,Please generate and try again.' in /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/clientapp/ZohoOAuthPersistenceByFile.php(62)
+#0 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/client/ZohoOAuthClient.php(38): ZohoOAuthPersistenceByFile->getOAuthTokens('soporte@linkdig...')
+#1 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/src/laravelZohoCrm.php(33): ZohoOAuthClient->getAccessToken('soporte@linkdig...')
+#2 /home/forge/incentives.demodayscript.com/app/Incentives/Core/Entity.php(219): dayscript\laravelZohoCrm\laravelZohoCrm->__construct()
+#3 /home/forge/incentives.demodayscript.com/app/Http/Controllers/EntitiesController.php(67): App\Incentives\Core\Entity->createZoho('Contacts', Array)
+#4 [internal function]: App\Http\Controllers\EntitiesController->store(Object(Illuminate\Http\Request))
+#5 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(55): call_user_func_array(Array, Array)
+#6 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('store', Array)
+#7 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\EntitiesController), 'store')
+#8 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(160): Illuminate\Routing\Route->runController()
+#9 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(572): Illuminate\Routing\Route->run()
+#10 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#11 /home/forge/incentives.demodayscript.com/app/Http/Middleware/Cors.php(18): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#12 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#13 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#14 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#15 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#16 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#17 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#18 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#19 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#20 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#21 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#22 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#23 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#24 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#25 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#27 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#28 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#29 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#30 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#31 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#32 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#33 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#34 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#35 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#36 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#37 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#38 /home/forge/incentives.demodayscript.com/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#39 {main}
+2018-11-05 13:41:36 SEVERE: Exception while retrieving tokens from persistence - ZohoOAuthException Caused by:'No Tokens exist for the given user-identifier,Please generate and try again.' in /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/clientapp/ZohoOAuthPersistenceByFile.php(62)
+#0 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/client/ZohoOAuthClient.php(38): ZohoOAuthPersistenceByFile->getOAuthTokens('soporte@linkdig...')
+#1 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/src/laravelZohoCrm.php(33): ZohoOAuthClient->getAccessToken('soporte@linkdig...')
+#2 /home/forge/incentives.demodayscript.com/app/Incentives/Core/Entity.php(219): dayscript\laravelZohoCrm\laravelZohoCrm->__construct()
+#3 /home/forge/incentives.demodayscript.com/app/Http/Controllers/EntitiesController.php(67): App\Incentives\Core\Entity->createZoho('Contacts', Array)
+#4 [internal function]: App\Http\Controllers\EntitiesController->store(Object(Illuminate\Http\Request))
+#5 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(55): call_user_func_array(Array, Array)
+#6 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('store', Array)
+#7 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\EntitiesController), 'store')
+#8 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(160): Illuminate\Routing\Route->runController()
+#9 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(572): Illuminate\Routing\Route->run()
+#10 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#11 /home/forge/incentives.demodayscript.com/app/Http/Middleware/Cors.php(18): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#12 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#13 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#14 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#15 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#16 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#17 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#18 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#19 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#20 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#21 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#22 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#23 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#24 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#25 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#27 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#28 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#29 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#30 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#31 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#32 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#33 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#34 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#35 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#36 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#37 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#38 /home/forge/incentives.demodayscript.com/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#39 {main}
+2018-11-05 13:48:01 SEVERE: Exception while retrieving tokens from persistence - ZohoOAuthException Caused by:'No Tokens exist for the given user-identifier,Please generate and try again.' in /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/clientapp/ZohoOAuthPersistenceByFile.php(62)
+#0 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/client/ZohoOAuthClient.php(38): ZohoOAuthPersistenceByFile->getOAuthTokens('soporte@linkdig...')
+#1 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/src/laravelZohoCrm.php(33): ZohoOAuthClient->getAccessToken('soporte@linkdig...')
+#2 /home/forge/incentives.demodayscript.com/app/Incentives/Core/Entity.php(219): dayscript\laravelZohoCrm\laravelZohoCrm->__construct()
+#3 /home/forge/incentives.demodayscript.com/app/Http/Controllers/EntitiesController.php(67): App\Incentives\Core\Entity->createZoho('Contacts', Array)
+#4 [internal function]: App\Http\Controllers\EntitiesController->store(Object(Illuminate\Http\Request))
+#5 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(55): call_user_func_array(Array, Array)
+#6 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('store', Array)
+#7 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\EntitiesController), 'store')
+#8 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(160): Illuminate\Routing\Route->runController()
+#9 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(572): Illuminate\Routing\Route->run()
+#10 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#11 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#12 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#13 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#14 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#15 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#16 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#17 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#18 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#19 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#20 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#21 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#22 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#23 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#24 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#25 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#27 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#28 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#29 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#30 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#31 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#32 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#33 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#34 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#35 /home/forge/incentives.demodayscript.com/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#36 {main}
+2018-11-05 14:18:24 SEVERE: Exception while retrieving tokens from persistence - ZohoOAuthException Caused by:'No Tokens exist for the given user-identifier,Please generate and try again.' in /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/clientapp/ZohoOAuthPersistenceByFile.php(62)
+#0 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/client/ZohoOAuthClient.php(38): ZohoOAuthPersistenceByFile->getOAuthTokens('soporte@linkdig...')
+#1 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/src/laravelZohoCrm.php(33): ZohoOAuthClient->getAccessToken('soporte@linkdig...')
+#2 /home/forge/incentives.demodayscript.com/app/Incentives/Core/Entity.php(219): dayscript\laravelZohoCrm\laravelZohoCrm->__construct()
+#3 /home/forge/incentives.demodayscript.com/app/Http/Controllers/EntitiesController.php(67): App\Incentives\Core\Entity->createZoho('Contacts', Array)
+#4 [internal function]: App\Http\Controllers\EntitiesController->store(Object(Illuminate\Http\Request))
+#5 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(55): call_user_func_array(Array, Array)
+#6 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('store', Array)
+#7 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\EntitiesController), 'store')
+#8 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(160): Illuminate\Routing\Route->runController()
+#9 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(572): Illuminate\Routing\Route->run()
+#10 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#11 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#12 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#13 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#14 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#15 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#16 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#17 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#18 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#19 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#20 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#21 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#22 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#23 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#24 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#25 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#27 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#28 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#29 /home/forge/incentives.demodayscript.com/app/Http/Middleware/Cors.php(18): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#30 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#31 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#32 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#33 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#34 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#35 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#36 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#37 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#38 /home/forge/incentives.demodayscript.com/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#39 {main}
+2018-11-05 14:20:08 SEVERE: Exception while retrieving tokens from persistence - ZohoOAuthException Caused by:'No Tokens exist for the given user-identifier,Please generate and try again.' in /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/clientapp/ZohoOAuthPersistenceByFile.php(62)
+#0 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/client/ZohoOAuthClient.php(38): ZohoOAuthPersistenceByFile->getOAuthTokens('soporte@linkdig...')
+#1 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/src/laravelZohoCrm.php(33): ZohoOAuthClient->getAccessToken('soporte@linkdig...')
+#2 /home/forge/incentives.demodayscript.com/app/Incentives/Core/Entity.php(219): dayscript\laravelZohoCrm\laravelZohoCrm->__construct()
+#3 /home/forge/incentives.demodayscript.com/app/Http/Controllers/EntitiesController.php(67): App\Incentives\Core\Entity->createZoho('Contacts', Array)
+#4 [internal function]: App\Http\Controllers\EntitiesController->store(Object(Illuminate\Http\Request))
+#5 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(55): call_user_func_array(Array, Array)
+#6 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('store', Array)
+#7 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\EntitiesController), 'store')
+#8 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(160): Illuminate\Routing\Route->runController()
+#9 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(572): Illuminate\Routing\Route->run()
+#10 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#11 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#12 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#13 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#14 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#15 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#16 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#17 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#18 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#19 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#20 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#21 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#22 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#23 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#24 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#25 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#27 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#28 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#29 /home/forge/incentives.demodayscript.com/app/Http/Middleware/Cors.php(18): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#30 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#31 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#32 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#33 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#34 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#35 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#36 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#37 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#38 /home/forge/incentives.demodayscript.com/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#39 {main}
+2018-11-05 14:21:00 SEVERE: Exception while retrieving tokens from persistence - ZohoOAuthException Caused by:'No Tokens exist for the given user-identifier,Please generate and try again.' in /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/clientapp/ZohoOAuthPersistenceByFile.php(62)
+#0 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/client/ZohoOAuthClient.php(38): ZohoOAuthPersistenceByFile->getOAuthTokens('soporte@linkdig...')
+#1 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/src/laravelZohoCrm.php(33): ZohoOAuthClient->getAccessToken('soporte@linkdig...')
+#2 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/src/Controllers/ZohoCrmController.php(125): dayscript\laravelZohoCrm\laravelZohoCrm->__construct()
+#3 [internal function]: dayscript\laravelZohoCrm\Controllers\ZohoCrmController->login()
+#4 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(55): call_user_func_array(Array, Array)
+#5 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('login', Array)
+#6 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(dayscript\laravelZohoCrm\Controllers\ZohoCrmController), 'login')
+#7 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(160): Illuminate\Routing\Route->runController()
+#8 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(572): Illuminate\Routing\Route->run()
+#9 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#10 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#11 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#12 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#13 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#14 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#15 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#16 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#17 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#18 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#19 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#20 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#21 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#22 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#23 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#24 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#25 /home/forge/incentives.demodayscript.com/app/Http/Middleware/Cors.php(18): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#26 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#27 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#29 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#30 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#31 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#32 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#33 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#34 /home/forge/incentives.demodayscript.com/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#35 {main}
+2018-11-05 14:26:46 SEVERE: Exception while retrieving tokens from persistence - ZohoOAuthException Caused by:'No Tokens exist for the given user-identifier,Please generate and try again.' in /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/clientapp/ZohoOAuthPersistenceByFile.php(62)
+#0 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/client/ZohoOAuthClient.php(38): ZohoOAuthPersistenceByFile->getOAuthTokens('soporte@linkdig...')
+#1 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/src/laravelZohoCrm.php(33): ZohoOAuthClient->getAccessToken('soporte@linkdig...')
+#2 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/src/Controllers/ZohoCrmController.php(125): dayscript\laravelZohoCrm\laravelZohoCrm->__construct()
+#3 [internal function]: dayscript\laravelZohoCrm\Controllers\ZohoCrmController->login()
+#4 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(55): call_user_func_array(Array, Array)
+#5 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('login', Array)
+#6 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(dayscript\laravelZohoCrm\Controllers\ZohoCrmController), 'login')
+#7 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(160): Illuminate\Routing\Route->runController()
+#8 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(572): Illuminate\Routing\Route->run()
+#9 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#10 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#11 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#12 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#13 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#14 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#15 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#16 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#17 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#18 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#19 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#20 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#21 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#22 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#23 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#24 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#25 /home/forge/incentives.demodayscript.com/app/Http/Middleware/Cors.php(18): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#26 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#27 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#29 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#30 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#31 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#32 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#33 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#34 /home/forge/incentives.demodayscript.com/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#35 {main}
+2018-11-05 14:27:37 SEVERE: Exception while retrieving tokens from persistence - ZohoOAuthException Caused by:'No Tokens exist for the given user-identifier,Please generate and try again.' in /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/clientapp/ZohoOAuthPersistenceByFile.php(46)
+#0 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/client/ZohoOAuthClient.php(38): ZohoOAuthPersistenceByFile->getOAuthTokens('soporte@linkdig...')
+#1 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/src/laravelZohoCrm.php(33): ZohoOAuthClient->getAccessToken('soporte@linkdig...')
+#2 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/src/Controllers/ZohoCrmController.php(125): dayscript\laravelZohoCrm\laravelZohoCrm->__construct()
+#3 [internal function]: dayscript\laravelZohoCrm\Controllers\ZohoCrmController->login()
+#4 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(55): call_user_func_array(Array, Array)
+#5 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('login', Array)
+#6 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(dayscript\laravelZohoCrm\Controllers\ZohoCrmController), 'login')
+#7 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(160): Illuminate\Routing\Route->runController()
+#8 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(572): Illuminate\Routing\Route->run()
+#9 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#10 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#11 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#12 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#13 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#14 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#15 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#16 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#17 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#18 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#19 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#20 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#21 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#22 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#23 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#24 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#25 /home/forge/incentives.demodayscript.com/app/Http/Middleware/Cors.php(18): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#26 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#27 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#29 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#30 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#31 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#32 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#33 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#34 /home/forge/incentives.demodayscript.com/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#35 {main}
+2018-11-05 14:28:27 SEVERE: Exception while retrieving tokens from persistence - ZohoOAuthException Caused by:'No Tokens exist for the given user-identifier,Please generate and try again.' in /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/clientapp/ZohoOAuthPersistenceByFile.php(46)
+#0 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/client/ZohoOAuthClient.php(38): ZohoOAuthPersistenceByFile->getOAuthTokens('soporte@linkdig...')
+#1 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/src/laravelZohoCrm.php(33): ZohoOAuthClient->getAccessToken('soporte@linkdig...')
+#2 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/src/Controllers/ZohoCrmController.php(125): dayscript\laravelZohoCrm\laravelZohoCrm->__construct()
+#3 [internal function]: dayscript\laravelZohoCrm\Controllers\ZohoCrmController->login()
+#4 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(55): call_user_func_array(Array, Array)
+#5 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('login', Array)
+#6 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(dayscript\laravelZohoCrm\Controllers\ZohoCrmController), 'login')
+#7 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(160): Illuminate\Routing\Route->runController()
+#8 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(572): Illuminate\Routing\Route->run()
+#9 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#10 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#11 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#12 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#13 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#14 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#15 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#16 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#17 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#18 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#19 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#20 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#21 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#22 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#23 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#24 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#25 /home/forge/incentives.demodayscript.com/app/Http/Middleware/Cors.php(18): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#26 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#27 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#29 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#30 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#31 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#32 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#33 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#34 /home/forge/incentives.demodayscript.com/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#35 {main}
+2018-11-05 14:40:08 SEVERE: Exception while retrieving tokens from persistence - ZohoOAuthException Caused by:'No Tokens exist for the given user-identifier,Please generate and try again.' in /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/clientapp/ZohoOAuthPersistenceByFile.php(46)
+#0 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/client/ZohoOAuthClient.php(38): ZohoOAuthPersistenceByFile->getOAuthTokens('soporte@linkdig...')
+#1 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/src/laravelZohoCrm.php(33): ZohoOAuthClient->getAccessToken('soporte@linkdig...')
+#2 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/src/Controllers/ZohoCrmController.php(125): dayscript\laravelZohoCrm\laravelZohoCrm->__construct()
+#3 [internal function]: dayscript\laravelZohoCrm\Controllers\ZohoCrmController->login()
+#4 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(55): call_user_func_array(Array, Array)
+#5 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('login', Array)
+#6 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(dayscript\laravelZohoCrm\Controllers\ZohoCrmController), 'login')
+#7 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(160): Illuminate\Routing\Route->runController()
+#8 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(572): Illuminate\Routing\Route->run()
+#9 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#10 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#11 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#12 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#13 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#14 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#15 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#16 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#17 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#18 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#19 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#20 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#21 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#22 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#23 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#24 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#25 /home/forge/incentives.demodayscript.com/app/Http/Middleware/Cors.php(18): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#26 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#27 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#29 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#30 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#31 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#32 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#33 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#34 /home/forge/incentives.demodayscript.com/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#35 {main}
+2018-11-05 14:41:32 SEVERE: Exception while retrieving tokens from persistence - ZohoOAuthException Caused by:'No Tokens exist for the given user-identifier,Please generate and try again.' in /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/clientapp/ZohoOAuthPersistenceByFile.php(46)
+#0 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/vendor/zohocrm/php-sdk/src/com/zoho/oauth/client/ZohoOAuthClient.php(38): ZohoOAuthPersistenceByFile->getOAuthTokens('soporte@linkdig...')
+#1 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/src/laravelZohoCrm.php(33): ZohoOAuthClient->getAccessToken('soporte@linkdig...')
+#2 /home/forge/incentives.demodayscript.com/packages/dayscript/laravelZohoCrm/src/Controllers/ZohoCrmController.php(125): dayscript\laravelZohoCrm\laravelZohoCrm->__construct()
+#3 [internal function]: dayscript\laravelZohoCrm\Controllers\ZohoCrmController->login()
+#4 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(55): call_user_func_array(Array, Array)
+#5 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('login', Array)
+#6 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(dayscript\laravelZohoCrm\Controllers\ZohoCrmController), 'login')
+#7 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(160): Illuminate\Routing\Route->runController()
+#8 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(572): Illuminate\Routing\Route->run()
+#9 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#10 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#11 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#12 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#13 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#14 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#15 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#16 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#17 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#18 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#19 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#20 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#21 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#22 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#23 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#24 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#25 /home/forge/incentives.demodayscript.com/app/Http/Middleware/Cors.php(18): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#26 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#27 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#29 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#30 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#31 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#32 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#33 /home/forge/incentives.demodayscript.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#34 /home/forge/incentives.demodayscript.com/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#35 {main}
+2018-11-05 16:03:42 INFO: Access Token has expired. Hence refreshing.
+2018-11-05 17:23:56 INFO: Access Token has expired. Hence refreshing.
+2018-11-05 22:13:07 INFO: Access Token has expired. Hence refreshing.
+2018-11-06 18:20:00 INFO: Access Token has expired. Hence refreshing.
+2018-11-06 21:22:28 INFO: Access Token has expired. Hence refreshing.
+2018-11-06 22:28:36 INFO: Access Token has expired. Hence refreshing.
+2018-11-07 06:28:36 INFO: Access Token has expired. Hence refreshing.
+2018-11-07 09:02:09 INFO: Access Token has expired. Hence refreshing.
+2018-11-07 10:13:06 INFO: Access Token has expired. Hence refreshing.
+2018-11-07 11:59:00 INFO: Access Token has expired. Hence refreshing.
+2018-11-07 13:00:27 INFO: Access Token has expired. Hence refreshing.
+2018-11-07 16:13:38 INFO: Access Token has expired. Hence refreshing.
+2018-11-08 11:58:43 INFO: Access Token has expired. Hence refreshing.
+2018-11-08 17:15:04 INFO: Access Token has expired. Hence refreshing.
+2018-11-09 10:38:43 INFO: Access Token has expired. Hence refreshing.
+2018-11-09 14:54:27 INFO: Access Token has expired. Hence refreshing.
+2018-11-09 15:54:28 INFO: Access Token has expired. Hence refreshing.
+2018-11-09 17:03:53 INFO: Access Token has expired. Hence refreshing.
+2018-11-09 18:10:07 INFO: Access Token has expired. Hence refreshing.
+2018-11-13 12:42:42 INFO: Access Token has expired. Hence refreshing.
+2018-11-13 20:42:59 INFO: Access Token has expired. Hence refreshing.
+2018-11-14 09:07:52 INFO: Access Token has expired. Hence refreshing.
+2018-11-14 10:09:55 INFO: Access Token has expired. Hence refreshing.
+2018-11-14 11:15:35 INFO: Access Token has expired. Hence refreshing.
+2018-11-14 12:22:13 INFO: Access Token has expired. Hence refreshing.
+2018-11-14 18:31:40 INFO: Access Token has expired. Hence refreshing.
+2018-11-15 15:43:03 INFO: Access Token has expired. Hence refreshing.
+2018-11-16 10:10:06 INFO: Access Token has expired. Hence refreshing.
+2018-11-16 11:13:03 INFO: Access Token has expired. Hence refreshing.
+2018-11-16 14:01:08 INFO: Access Token has expired. Hence refreshing.
+2018-11-16 15:11:04 INFO: Access Token has expired. Hence refreshing.
+2018-11-16 17:01:06 INFO: Access Token has expired. Hence refreshing.
+2018-11-16 19:16:05 INFO: Access Token has expired. Hence refreshing.
+2018-11-16 20:01:05 INFO: Access Token has expired. Hence refreshing.
+2018-11-16 20:46:23 INFO: Access Token has expired. Hence refreshing.
+2018-11-19 11:01:06 INFO: Access Token has expired. Hence refreshing.
+2018-11-19 12:46:03 INFO: Access Token has expired. Hence refreshing.
+2018-11-19 14:12:12 INFO: Access Token has expired. Hence refreshing.
+2018-11-19 14:19:43 INFO: Access Token has expired. Hence refreshing.
+2018-11-19 14:26:48 INFO: Access Token has expired. Hence refreshing.
+2018-11-19 14:26:53 INFO: Access Token has expired. Hence refreshing.
+2018-11-19 14:27:12 INFO: Access Token has expired. Hence refreshing.
+2018-11-19 14:29:16 INFO: Access Token has expired. Hence refreshing.
+2018-11-19 14:31:00 INFO: Access Token has expired. Hence refreshing.
+2018-11-19 14:31:32 INFO: Access Token has expired. Hence refreshing.
+2018-11-19 14:31:44 INFO: Access Token has expired. Hence refreshing.
+2018-11-19 14:38:21 INFO: Access Token has expired. Hence refreshing.
+2018-11-19 14:56:55 INFO: Access Token has expired. Hence refreshing.
+2018-11-19 15:09:25 INFO: Access Token has expired. Hence refreshing.
+2018-11-19 15:09:57 INFO: Access Token has expired. Hence refreshing.
+2018-11-19 15:11:14 INFO: Access Token has expired. Hence refreshing.
+2018-11-19 15:11:43 INFO: Access Token has expired. Hence refreshing.
+2018-11-19 15:31:03 INFO: Access Token has expired. Hence refreshing.
+2018-11-19 15:49:09 INFO: Access Token has expired. Hence refreshing.
+2018-11-19 16:16:06 INFO: Access Token has expired. Hence refreshing.
+2018-11-19 17:42:13 INFO: Access Token has expired. Hence refreshing.
+2018-11-19 22:16:16 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 09:37:22 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 09:40:01 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 10:49:43 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 13:46:04 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 14:05:07 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 14:16:42 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 14:36:14 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 14:42:48 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 14:46:04 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 15:30:56 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 15:31:05 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 15:32:44 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 15:49:33 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 15:51:04 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 15:53:46 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 15:56:34 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 15:56:39 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 15:57:23 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 15:58:47 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 15:58:53 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 15:58:55 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 15:58:58 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 15:59:01 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 16:00:26 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 16:00:28 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 16:00:31 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 16:00:35 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 16:00:46 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 16:01:20 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 16:01:23 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 16:02:10 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 16:03:27 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 16:03:32 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 16:03:35 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 16:03:49 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 16:03:56 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 16:06:10 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 16:06:17 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 16:06:29 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 16:10:15 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 16:10:19 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 16:11:40 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 16:11:43 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 16:12:24 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 16:13:13 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 16:16:09 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 16:21:35 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 16:21:40 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 16:24:36 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 16:29:11 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 16:31:35 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 16:50:32 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 16:50:35 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 16:50:37 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 16:50:39 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 16:53:56 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 16:56:43 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 17:06:55 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 17:11:14 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 17:13:11 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 17:13:15 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 17:13:18 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 17:13:21 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 17:21:25 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 17:37:10 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 17:44:07 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 17:52:16 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 17:57:57 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 18:06:02 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 18:55:52 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 18:56:02 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 18:56:09 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 18:56:24 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 18:57:28 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 19:17:02 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 20:28:59 INFO: Access Token has expired. Hence refreshing.
+2018-11-20 22:19:32 INFO: Access Token has expired. Hence refreshing.
+2018-11-21 08:54:13 INFO: Access Token has expired. Hence refreshing.
+2018-11-21 10:59:07 INFO: Access Token has expired. Hence refreshing.
+2018-11-21 12:00:32 INFO: Access Token has expired. Hence refreshing.
+2018-11-21 14:32:09 INFO: Access Token has expired. Hence refreshing.
+2018-11-21 15:45:13 INFO: Access Token has expired. Hence refreshing.
+2018-11-21 23:41:50 INFO: Access Token has expired. Hence refreshing.
+2018-11-22 00:43:40 INFO: Access Token has expired. Hence refreshing.
+2018-11-22 09:04:04 INFO: Access Token has expired. Hence refreshing.
+2018-11-22 10:05:50 INFO: Access Token has expired. Hence refreshing.
+2018-11-22 11:08:58 INFO: Access Token has expired. Hence refreshing.
+2018-11-22 14:04:08 INFO: Access Token has expired. Hence refreshing.
+2018-11-22 15:04:34 INFO: Access Token has expired. Hence refreshing.
+2018-11-22 16:12:47 INFO: Access Token has expired. Hence refreshing.
+2018-11-22 17:14:11 INFO: Access Token has expired. Hence refreshing.
+2018-11-22 18:36:00 INFO: Access Token has expired. Hence refreshing.
+2018-11-22 19:51:07 INFO: Access Token has expired. Hence refreshing.
+2018-11-22 21:12:54 INFO: Access Token has expired. Hence refreshing.
+2018-11-22 22:19:41 INFO: Access Token has expired. Hence refreshing.
+2018-11-22 23:22:30 INFO: Access Token has expired. Hence refreshing.
+2018-11-23 08:50:07 INFO: Access Token has expired. Hence refreshing.
+2018-11-23 09:51:40 INFO: Access Token has expired. Hence refreshing.
+2018-11-23 10:56:55 INFO: Access Token has expired. Hence refreshing.
+2018-11-23 12:11:58 INFO: Access Token has expired. Hence refreshing.
+2018-11-23 14:12:05 INFO: Access Token has expired. Hence refreshing.
+2018-11-23 15:18:47 INFO: Access Token has expired. Hence refreshing.
+2018-11-23 16:25:31 INFO: Access Token has expired. Hence refreshing.
+2018-11-23 17:32:15 INFO: Access Token has expired. Hence refreshing.
+2018-11-23 18:38:12 INFO: Access Token has expired. Hence refreshing.
+2018-11-23 19:42:59 INFO: Access Token has expired. Hence refreshing.
+2018-11-24 14:53:57 INFO: Access Token has expired. Hence refreshing.
+2018-11-24 15:55:01 INFO: Access Token has expired. Hence refreshing.
+2018-11-24 22:09:40 INFO: Access Token has expired. Hence refreshing.
+2018-11-25 13:07:16 INFO: Access Token has expired. Hence refreshing.
+2018-11-25 14:41:48 INFO: Access Token has expired. Hence refreshing.
+2018-11-25 16:47:11 INFO: Access Token has expired. Hence refreshing.
+2018-11-25 17:50:07 INFO: Access Token has expired. Hence refreshing.
+2018-11-25 19:04:03 INFO: Access Token has expired. Hence refreshing.
+2018-11-25 20:10:13 INFO: Access Token has expired. Hence refreshing.
+2018-11-25 21:10:24 INFO: Access Token has expired. Hence refreshing.
+2018-11-26 09:41:57 INFO: Access Token has expired. Hence refreshing.
+2018-11-26 17:38:22 INFO: Access Token has expired. Hence refreshing.
+2018-11-26 18:38:33 INFO: Access Token has expired. Hence refreshing.
+2018-11-26 21:21:58 INFO: Access Token has expired. Hence refreshing.
+2018-11-26 22:33:54 INFO: Access Token has expired. Hence refreshing.
+2018-11-26 23:33:54 INFO: Access Token has expired. Hence refreshing.
+2018-11-27 00:33:55 INFO: Access Token has expired. Hence refreshing.
+2018-11-27 05:27:28 INFO: Access Token has expired. Hence refreshing.
+2018-11-27 06:27:29 INFO: Access Token has expired. Hence refreshing.
+2018-11-27 07:27:30 INFO: Access Token has expired. Hence refreshing.
+2018-11-27 08:55:56 INFO: Access Token has expired. Hence refreshing.
+2018-11-27 09:55:56 INFO: Access Token has expired. Hence refreshing.
+2018-11-27 10:55:57 INFO: Access Token has expired. Hence refreshing.
+2018-11-27 14:17:10 INFO: Access Token has expired. Hence refreshing.
+2018-11-28 10:58:53 INFO: Access Token has expired. Hence refreshing.
+2018-11-28 14:29:33 INFO: Access Token has expired. Hence refreshing.
+2018-11-28 15:29:34 INFO: Access Token has expired. Hence refreshing.
+2018-11-28 16:33:50 INFO: Access Token has expired. Hence refreshing.
+2018-11-28 17:35:56 INFO: Access Token has expired. Hence refreshing.
+2018-11-28 19:00:02 INFO: Access Token has expired. Hence refreshing.
+2018-11-28 20:06:27 INFO: Access Token has expired. Hence refreshing.
+2018-11-28 21:44:21 INFO: Access Token has expired. Hence refreshing.
+2018-11-28 23:09:33 INFO: Access Token has expired. Hence refreshing.
+2018-11-29 04:27:30 INFO: Access Token has expired. Hence refreshing.
+2018-11-29 06:38:13 INFO: Access Token has expired. Hence refreshing.
+2018-11-29 07:42:31 INFO: Access Token has expired. Hence refreshing.
+2018-11-29 09:40:35 INFO: Access Token has expired. Hence refreshing.
+2018-11-29 11:03:07 INFO: Access Token has expired. Hence refreshing.
+2018-11-29 12:04:22 INFO: Access Token has expired. Hence refreshing.
+2018-11-29 13:11:26 INFO: Access Token has expired. Hence refreshing.
+2018-11-29 14:26:33 INFO: Access Token has expired. Hence refreshing.
+2018-11-29 15:26:59 INFO: Access Token has expired. Hence refreshing.
+2018-11-29 17:07:36 INFO: Access Token has expired. Hence refreshing.
+2018-11-29 18:38:32 INFO: Access Token has expired. Hence refreshing.
+2018-11-29 19:41:25 INFO: Access Token has expired. Hence refreshing.
+2018-11-29 20:46:29 INFO: Access Token has expired. Hence refreshing.
+2018-11-30 04:57:41 INFO: Access Token has expired. Hence refreshing.
+2018-11-30 08:43:40 INFO: Access Token has expired. Hence refreshing.
+2018-11-30 09:44:05 INFO: Access Token has expired. Hence refreshing.
+2018-11-30 10:45:19 INFO: Access Token has expired. Hence refreshing.
+2018-11-30 11:45:41 INFO: Access Token has expired. Hence refreshing.
+2018-11-30 12:45:47 INFO: Access Token has expired. Hence refreshing.
+2018-11-30 13:49:21 INFO: Access Token has expired. Hence refreshing.
+2018-11-30 14:50:32 INFO: Access Token has expired. Hence refreshing.
+2018-11-30 15:51:07 INFO: Access Token has expired. Hence refreshing.
+2018-11-30 16:52:58 INFO: Access Token has expired. Hence refreshing.
+2018-11-30 17:53:34 INFO: Access Token has expired. Hence refreshing.
+2018-11-30 18:53:38 INFO: Access Token has expired. Hence refreshing.
+2018-11-30 19:53:58 INFO: Access Token has expired. Hence refreshing.
+2018-11-30 20:54:01 INFO: Access Token has expired. Hence refreshing.
+2018-11-30 22:03:41 INFO: Access Token has expired. Hence refreshing.
+2018-11-30 23:06:02 INFO: Access Token has expired. Hence refreshing.
+2018-12-01 00:06:28 INFO: Access Token has expired. Hence refreshing.
+2018-12-01 01:07:14 INFO: Access Token has expired. Hence refreshing.
+2018-12-01 02:12:34 INFO: Access Token has expired. Hence refreshing.
+2018-12-01 03:28:32 INFO: Access Token has expired. Hence refreshing.
+2018-12-01 04:44:35 INFO: Access Token has expired. Hence refreshing.
+2018-12-01 05:51:52 INFO: Access Token has expired. Hence refreshing.
+2018-12-01 07:03:17 INFO: Access Token has expired. Hence refreshing.
+2018-12-01 08:10:06 INFO: Access Token has expired. Hence refreshing.
+2018-12-01 09:19:34 INFO: Access Token has expired. Hence refreshing.
+2018-12-01 10:21:21 INFO: Access Token has expired. Hence refreshing.
+2018-12-01 11:39:42 INFO: Access Token has expired. Hence refreshing.
+2018-12-01 12:44:46 INFO: Access Token has expired. Hence refreshing.
+2018-12-01 13:45:26 INFO: Access Token has expired. Hence refreshing.
+2018-12-01 14:46:24 INFO: Access Token has expired. Hence refreshing.
+2018-12-01 15:50:45 INFO: Access Token has expired. Hence refreshing.
+2018-12-01 16:58:02 INFO: Access Token has expired. Hence refreshing.
+2018-12-01 18:08:18 INFO: Access Token has expired. Hence refreshing.
+2018-12-01 19:10:11 INFO: Access Token has expired. Hence refreshing.
+2018-12-01 20:13:28 INFO: Access Token has expired. Hence refreshing.
+2018-12-01 21:38:16 INFO: Access Token has expired. Hence refreshing.
+2018-12-01 23:03:51 INFO: Access Token has expired. Hence refreshing.
+2018-12-02 05:08:39 INFO: Access Token has expired. Hence refreshing.
+2018-12-02 06:29:36 INFO: Access Token has expired. Hence refreshing.
+2018-12-02 07:47:07 INFO: Access Token has expired. Hence refreshing.
+2018-12-02 08:51:44 INFO: Access Token has expired. Hence refreshing.
+2018-12-02 09:51:57 INFO: Access Token has expired. Hence refreshing.
+2018-12-02 11:02:13 INFO: Access Token has expired. Hence refreshing.
+2018-12-02 12:07:51 INFO: Access Token has expired. Hence refreshing.
+2018-12-02 13:11:18 INFO: Access Token has expired. Hence refreshing.
+2018-12-02 14:13:28 INFO: Access Token has expired. Hence refreshing.
+2018-12-02 15:21:53 INFO: Access Token has expired. Hence refreshing.
+2018-12-02 16:22:06 INFO: Access Token has expired. Hence refreshing.
+2018-12-02 17:22:50 INFO: Access Token has expired. Hence refreshing.
+2018-12-02 18:29:17 INFO: Access Token has expired. Hence refreshing.
+2018-12-02 19:31:42 INFO: Access Token has expired. Hence refreshing.
+2018-12-02 20:32:12 INFO: Access Token has expired. Hence refreshing.
+2018-12-02 21:37:20 INFO: Access Token has expired. Hence refreshing.
+2018-12-02 22:37:51 INFO: Access Token has expired. Hence refreshing.
+2018-12-02 23:47:00 INFO: Access Token has expired. Hence refreshing.
+2018-12-03 06:32:52 INFO: Access Token has expired. Hence refreshing.
+2018-12-03 07:51:20 INFO: Access Token has expired. Hence refreshing.
+2018-12-03 09:00:30 INFO: Access Token has expired. Hence refreshing.
+2018-12-03 10:01:23 INFO: Access Token has expired. Hence refreshing.
+2018-12-03 11:12:47 INFO: Access Token has expired. Hence refreshing.
+2018-12-03 12:15:05 INFO: Access Token has expired. Hence refreshing.
+2018-12-03 13:16:02 INFO: Access Token has expired. Hence refreshing.
+2018-12-03 14:51:32 INFO: Access Token has expired. Hence refreshing.
+2018-12-03 16:00:42 INFO: Access Token has expired. Hence refreshing.
+2018-12-03 17:36:00 INFO: Access Token has expired. Hence refreshing.
+2018-12-03 18:36:20 INFO: Access Token has expired. Hence refreshing.
+2018-12-03 20:11:46 INFO: Access Token has expired. Hence refreshing.
+2018-12-03 21:17:49 INFO: Access Token has expired. Hence refreshing.
+2018-12-03 22:26:15 INFO: Access Token has expired. Hence refreshing.
+2018-12-03 23:33:20 INFO: Access Token has expired. Hence refreshing.
+2018-12-04 04:16:46 INFO: Access Token has expired. Hence refreshing.
+2018-12-04 05:30:46 INFO: Access Token has expired. Hence refreshing.
+2018-12-04 07:58:38 INFO: Access Token has expired. Hence refreshing.
+2018-12-04 09:05:54 INFO: Access Token has expired. Hence refreshing.
+>>>>>>> 842be7850748fd8c0ecdb55117f95983884b87ad
+2018-12-11 09:41:25 INFO: Access Token has expired. Hence refreshing.
+2018-12-11 11:32:01 INFO: Access Token has expired. Hence refreshing.
+2018-12-11 15:16:52 INFO: Access Token has expired. Hence refreshing.
