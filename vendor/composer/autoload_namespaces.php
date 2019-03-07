@@ -10,6 +10,4 @@ return array(
     'Parsedown' => array($vendorDir . '/erusev/parsedown'),
     'Mockery' => array($vendorDir . '/mockery/mockery/library'),
     'Doctrine\\Common\\Lexer\\' => array($vendorDir . '/doctrine/lexer/lib'),
-    'CristianPontes\\ZohoCRMClient' => array($vendorDir . '/cristianpontes/zoho-crm-client-php'),
-    'Buzz' => array($vendorDir . '/kriswallsmith/buzz/lib'),
 );

@@ -13,7 +13,7 @@
     "keywords": ["Laravel", "laravelZohoCrm"],
     "require": {
         "illuminate/support": "~5",
-        "zohocrm/php-sdk": "^1.1",
+        "zohocrm/php-sdk": "^1.1"
     },
     "require-dev": {
         "phpunit/phpunit": "~7.0",
