@@ -2,8 +2,6 @@
 
 namespace dayscript\laravelZohoCrm;
 
-
-// require '/home/ariel/projects/incentives/packages/dayscript/laravelZohoCrm/vendor/autoload.php';
 require __DIR__.'/../vendor/autoload.php';
 
 
@@ -22,19 +20,14 @@ class laravelZohoCrm extends Eloquent
     // Build wonderful things
     public function __construct(){
       $this->configParams = $this->getConfigParams();
+
       $_SERVER['user_email_id'] = $this->configParams['client_email'];
 
       ZCRMRestClient::initialize();
       $oAuthClient = ZohoOAuth::getClientInstance();
 
-      /* ZCRMRestClient::initialize();
-     $oAuthClient = ZohoOAuth::getClientInstance();
-     $refreshToken = "1000.799bfbf8e873b80340395e61192348f3.8eba40d421883fe87305ebae046fde6f";
-     $userIdentifier = "soporte@linkdigital.co";
-     $oAuthTokens = $oAuthClient->generateAccessTokenFromRefreshToken($refreshToken,$userIdentifier); */
-
       try {
-        $oAuthTokens = $oAuthClient->generateAccessToken($this->configParams['grant_token']);
+          $oAuthTokens = $oAuthClient->generateAccessToken($this->configParams['grant_token']);
       } catch (\Exception $e) {
         $this->refreshToken = $oAuthClient->getAccessToken($_SERVER['user_email_id']);
       }
@@ -45,7 +38,6 @@ class laravelZohoCrm extends Eloquent
     *
     */
     private function getConfigParams(){
-
       return config('laravelzohocrm');
     }
 

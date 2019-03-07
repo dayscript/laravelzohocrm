@@ -3,6 +3,7 @@
 namespace dayscript\laravelZohoCrm;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Routing\Route;
 
 class laravelZohoCrmServiceProvider extends ServiceProvider
 {
@@ -14,7 +15,7 @@ class laravelZohoCrmServiceProvider extends ServiceProvider
     public function boot()
     {
         // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'dayscript');
-        // $this->loadViewsFrom(__DIR__.'/../resources/views', 'dayscript');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'laravelzohocrm');
         // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         $this->loadRoutesFrom(__DIR__.'/routes.php');
 
@@ -22,6 +23,15 @@ class laravelZohoCrmServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->bootForConsole();
         }
+
+        // $this->publishes([
+        //   __DIR__.'/../resources/views' => resource_path('views/vendor/laravelZohoCrm'),
+        // ]);
+
+        $this->publishes([
+          __DIR__.'/../resources/assets' => public_path('vendor/laravelZohoCrm/assets'),
+        ], 'public');
+
     }
 
     /**
@@ -62,9 +72,9 @@ class laravelZohoCrmServiceProvider extends ServiceProvider
         ], 'laravelzohocrm.config');
 
         // Publishing the views.
-        /*$this->publishes([
-            __DIR__.'/../resources/views' => base_path('resources/views/vendor/dayscript'),
-        ], 'laravelzohocrm.views');*/
+        // $this->publishes([
+        //     __DIR__.'/../resources/views' => base_path('resources/views/vendor/laravelZohoCrm'),
+        // ], 'laravelzohocrm.views');
 
         // Publishing assets.
         /*$this->publishes([

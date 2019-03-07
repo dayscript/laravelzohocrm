@@ -17,6 +17,12 @@ use ZCRMOrganization;
 
 class ZohoCrmController extends Controller {
 
+    public function index(){
+      $zoho = new laravelZohoCrm;
+      return view('laravelzohocrm::index');
+    }
+
+
     public function getOrg(){
       $zoho = new laravelZohoCrm;
       $zoho->getOrg();
