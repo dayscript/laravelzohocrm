@@ -2,13 +2,13 @@
 require_once 'OAuthLogger.php';
 class ZohoOAuthUtil
 {
-	public static function getFileContentAsMap($fileHandler, $env = false)
+	public static function getFileContentAsMap($fileHandler /*, $env = false*/)
 	{
 		$reponseMap=array();
-		if($env){
-				$reponseMap = config('laravelzohocrm');
-				return $reponseMap;
-		}
+		// if($env){
+		// 		$reponseMap = config('laravelzohocrm');
+		// 		return $reponseMap;
+		// }
 
 		try{
 			while(!feof($fileHandler))

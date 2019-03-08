@@ -23,7 +23,8 @@ class laravelZohoCrm extends Eloquent
 
       $_SERVER['user_email_id'] = $this->configParams['client_email'];
 
-      ZCRMRestClient::initialize();
+
+      ZCRMRestClient::initialize($this->configParams);
       $oAuthClient = ZohoOAuth::getClientInstance();
 
       try {
