@@ -20,8 +20,8 @@
       <div class="container-fluid">
         @include('laravelzohocrm::partials.dasboard-header')
         <div class="row">
-          @include('laravelzohocrm::partials.stats')
-          @include('laravelzohocrm::partials.tasks')
+          {{-- @include('laravelzohocrm::partials.stats')
+          @include('laravelzohocrm::partials.tasks') --}}
         </div>
       </div>
     </div>

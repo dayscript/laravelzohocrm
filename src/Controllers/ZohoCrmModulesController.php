@@ -4,6 +4,8 @@ namespace dayscript\laravelZohoCrm\Controllers;
 
 use App\Http\Controllers\Controller;
 use dayscript\laravelZohoCrmModules\ZohoModules;
+use dayscript\laravelZohoCrm\laravelZohoCrm;
+
 
 
 class ZohoCrmModulesController extends Controller
@@ -28,8 +30,13 @@ class ZohoCrmModulesController extends Controller
     /*
     *
     */
-    public function edit(){
-      return view('laravelzohocrm::modules.create');
+    public function edit($module){
+      $vars = [];
+      $zoho = new laravelZohoCrm;
+      $zoho->setModule($module);
+      $zoho->getModule();
+      $vars['module'] = $zoho->response;
+      return view('laravelzohocrm::modules.edit', compact('vars'));
     }
 
     /*

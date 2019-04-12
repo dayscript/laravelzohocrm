@@ -5,6 +5,7 @@ namespace dayscript\laravelZohoCrm\Controllers;
 
 use App\Http\Controllers\Controller;
 use dayscript\laravelZohoCrm\laravelZohoCrm;
+use Illuminate\Routing\Route;
 
 
 use ZCRMRestClient;
@@ -19,7 +20,12 @@ class ZohoCrmController extends Controller {
 
     public function index(){
       $zoho = new laravelZohoCrm;
-      return view('laravelzohocrm::index');
+      $zoho->getOrg();
+      $org = $zoho->response;
+      $zoho->getModules();
+      $modules = $zoho->response;
+      // dd($modules);
+      return view('laravelzohocrm::index', compact('org', 'modules'));
     }
 
 

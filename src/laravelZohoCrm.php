@@ -7,6 +7,8 @@ require __DIR__.'/../vendor/autoload.php';
 
 use \Illuminate\Database\Eloquent\Model as Eloquent;
 use GuzzleHttp\Client;
+use Exception;
+
 use ZCRMRestClient;
 use ZCRMModule;
 use ZohoOAuth;
@@ -15,11 +17,20 @@ use ZCRMInventoryLineItem;
 use ZCRMTax;
 
 
+
+
 class laravelZohoCrm extends Eloquent
 {
+
+
+    public $org;
+    public $user;
+    public $modules;
+    public $module;
+
     // Build wonderful things
     public function __construct(){
-      $this->configParams = $this->getConfigParams();
+      $this->configParams = config('laravelzohocrm');
 
       $_SERVER['user_email_id'] = $this->configParams['client_email'];
 
@@ -39,7 +50,7 @@ class laravelZohoCrm extends Eloquent
     *
     */
     private function getConfigParams(){
-      return config('laravelzohocrm');
+      return true;
     }
 
     /**
@@ -58,6 +69,10 @@ class laravelZohoCrm extends Eloquent
       return $res->getBody();
     }
 
+    public function setModule($module){
+      $this->module = $module;
+    }
+
     /**
     * Get the Organization data
     *
@@ -65,8 +80,44 @@ class laravelZohoCrm extends Eloquent
     public function getOrg(){
 
       $zcrmModuleIns = ZCRMRestClient::getInstance();
-      $records = $zcrmModuleIns->getOrganizationDetails();
-      $this->response = $records->getResponseJSON();
+      $this->org = $zcrmModuleIns->getOrganizationDetails();
+      $this->response = $this->org->getResponseJSON();
+    }
+
+    public function getModule(){
+      $zcrmModuleIns = ZCRMRestClient::getInstance();
+
+      if(!$this->module){
+        throw new Exception('The module property can\'t null, use method setModule() for set this property');
+      }
+      
+      $this->response = $zcrmModuleIns->getModule($this->module)->getResponseJSON()['modules'][0];
+      
+    }
+
+    /**
+     * Get all Zoho Modules
+     */
+
+    public function getModules(){
+      $modules = [];
+      $zcrmModuleIns = ZCRMRestClient::getInstance();
+      $request = $zcrmModuleIns->getAllModules()->getData();
+      foreach ($request as $key => $module) {
+        $modules[$module->getModuleName()] = array(
+          'getModuleName' => $module->getModuleName(),  //to get the name of the module
+          'getSingularLabel' => $module->getSingularLabel(),  //to get the singular label of the module
+          'getPluralLabel' => $module->getPluralLabel(),  //to get the plural label of the module
+          'getBusinessCardFieldLimit' => $module->getBusinessCardFieldLimit(),  //to get the business card field limit of the module
+          'getAPIName' => $module->getAPIName(),  //to get the api name of the module
+          'isCreatable' => $module->isCreatable(),  //to check wther the module is creatable
+          'isConvertable' => $module->isConvertable(),  //to check wther the module is Convertable
+          'isEditable' => $module->isEditable(),  //to check wther the module is editable
+          'isDeletable' => $module->isDeletable(),  //to check wther the module is deletable
+          'getWebLink' => $module->getWebLink(),  //to get the weblink
+        );
+      }
+      $this->response = $this->modules = $modules;
     }
 
     /**
@@ -74,8 +125,8 @@ class laravelZohoCrm extends Eloquent
     *
     */
     public function getModuleRecords($module){
-
-      $zcrmModuleIns = ZCRMModule::getInstance($module);
+      $this->module = $module;
+      $zcrmModuleIns = ZCRMModule::getInstance($this->module);
       $records = $zcrmModuleIns->getRecords()->getResponseJSON();
       return $this->response = $records;
     }

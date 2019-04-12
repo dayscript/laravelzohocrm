@@ -8,7 +8,7 @@
   -->
     <div class="logo">
       <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-        Creative Tim
+        Zoho CRM
       </a>
     </div>
     @include('laravelzohocrm::partials.left-bar')
