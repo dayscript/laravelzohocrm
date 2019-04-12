@@ -28,7 +28,7 @@ ZOHOCRM_PERSISTENCE_HANDLER_CLASS=ZohoOAuthPersistenceHandler
 ZOHOCRM_CLIENT_EMAIL=
 
 ZOHOCRM_GRANT_TOKEN={grant_token}
-generate grant_token https://accounts.zoho.com/developerconsole and minimun scopes ZohoCRM.modules.all,ZohoCRM.org.all,aaaserver.profile.READ
+generate grant_token https://accounts.zoho.com/developerconsole and minimun scopes ZohoCRM.modules.all,aaaserver.profile.all,ZohoCRM.settings.all,ZohoCRM.users.all,ZohoCRM.org.all
 
 ZOHOCRM_TOKEN_PERSISTENCE_PATH
 Set path absolute rute example
